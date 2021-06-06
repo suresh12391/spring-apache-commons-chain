@@ -2,6 +2,8 @@
 
 This Spring Boot 2 utilize the Apache `commons-chain` library and implements **Chain of Responsibility**.
 
+Refer: https://www.baeldung.com/apache-commons-chain
+
 ### Sample Flow:
 
 ```

@@ -1,5 +1,6 @@
 package com.suresh.chain.controller;
 
+import org.apache.commons.chain.Catalog;
 import org.apache.commons.chain.Command;
 import org.apache.commons.chain.Context;
 import org.apache.commons.chain.impl.ContextBase;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.suresh.chain.atm.AtmCatalog;
+import com.suresh.chain.atm.bean.AtmRequestContext;
 import com.suresh.chain.domain.ChainRequest;
 import com.suresh.chain.domain.ChainResponse;
 import com.suresh.chain.service.ChainService;
@@ -53,5 +56,31 @@ public class ChainController {
 		}
 
 		return "DONE";
+	}
+
+	@SuppressWarnings("unchecked")
+	@GetMapping(value = "/atm", produces = MediaType.APPLICATION_JSON_VALUE)
+	public String withdrawCash() {
+
+		Context context = new AtmRequestContext();
+		context.put("totalAmountToBeWithdrawn", 460);
+		context.put("amountLeftToBeWithdrawn", 460);
+
+		Catalog catalog = new AtmCatalog();
+		Command atmWithdrawalChain = catalog.getCommand("atmWithdrawalChain");
+
+		try {
+			atmWithdrawalChain.execute(context);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		logger.info(context.get("totalAmountToBeWithdrawn"));
+		logger.info(context.get("amountLeftToBeWithdrawn"));
+		logger.info(context.get("noOfHundredsDispensed"));
+		logger.info(context.get("noOfFiftiesDispensed"));
+		logger.info(context.get("noOfTensDispensed"));
+
+		return "ATM Withdraw is Completed..!";
 	}
 }
