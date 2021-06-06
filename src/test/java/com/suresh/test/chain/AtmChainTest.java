@@ -7,8 +7,8 @@ import org.apache.commons.chain.Command;
 import org.apache.commons.chain.Context;
 import org.junit.Test;
 
-import com.suresh.chain.atm.AtmCatalog;
-import com.suresh.chain.atm.bean.AtmRequestContext;
+import com.suresh.atm.AtmCatalog;
+import com.suresh.atm.bean.AtmRequestContext;
 
 public class AtmChainTest {
 

@@ -1,4 +1,4 @@
-package com.suresh.chain.atm.filter;
+package com.suresh.atm.filter;
 
 import org.apache.commons.chain.Context;
 import org.apache.commons.chain.Filter;

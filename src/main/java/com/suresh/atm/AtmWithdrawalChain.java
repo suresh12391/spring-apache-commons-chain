@@ -1,10 +1,10 @@
-package com.suresh.chain.atm;
+package com.suresh.atm;
 
 import org.apache.commons.chain.impl.ChainBase;
 
-import com.suresh.chain.atm.command.HundredDenominationDispenser;
-import com.suresh.chain.atm.command.TwoThousandDenominationDispenser;
-import com.suresh.chain.atm.filter.AuditFilter;
+import com.suresh.atm.command.HundredDenominationDispenser;
+import com.suresh.atm.command.TwoThousandDenominationDispenser;
+import com.suresh.atm.filter.AuditFilter;
 
 public class AtmWithdrawalChain extends ChainBase {
 

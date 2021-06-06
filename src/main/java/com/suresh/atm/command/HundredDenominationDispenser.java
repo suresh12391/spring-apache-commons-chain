@@ -1,4 +1,4 @@
-package com.suresh.chain.atm.command;
+package com.suresh.atm.command;
 
 import org.apache.commons.chain.Command;
 import org.apache.commons.chain.Context;

@@ -1,4 +1,4 @@
-package com.suresh.chain.atm.bean;
+package com.suresh.atm.bean;
 
 import org.apache.commons.chain.impl.ContextBase;
 

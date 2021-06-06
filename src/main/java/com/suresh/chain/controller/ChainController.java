@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.suresh.chain.atm.AtmCatalog;
-import com.suresh.chain.atm.bean.AtmRequestContext;
+import com.suresh.atm.AtmCatalog;
+import com.suresh.atm.bean.AtmRequestContext;
 import com.suresh.chain.domain.ChainRequest;
 import com.suresh.chain.domain.ChainResponse;
 import com.suresh.chain.service.ChainService;

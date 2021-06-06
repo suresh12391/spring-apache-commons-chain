@@ -1,4 +1,4 @@
-package com.suresh.chain.atm;
+package com.suresh.atm;
 
 import org.apache.commons.chain.impl.CatalogBase;
 
